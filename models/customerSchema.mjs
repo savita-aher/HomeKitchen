@@ -1,44 +1,41 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const customerSchema = new mongoose.Schema(
-  {
-    customerName: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    orderId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Order',
-      required: true
-    },
-    totalPrice: {
-      type: Number,
-      required: true,
-      min: 0
-    },
-    phoneNumber: {
-      type: String,
-      required: true,
-      match: /^[0-9]{10}$/
-    },
-    email: {
-      type: String,
-      required: true,
-      lowercase: true,
-      match: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-    },
-    pickupTime: {
-      type: Date,
-      required: true
-    },
-    numberOfItems: {
-      type: Number,
-      required: true,
-      min: 1
-    }
+const customerSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, "❌ Name is required"],
+    trim: true,
+    minlength: 2
   },
-  { timestamps: true }
-);
+  email: {
+    type: String,
+    required: [true, "❌ Email is required"],
+    unique: true,
+    match: /.+\@.+\..+/
+  },
+  phone: {
+    type: String,
+    match: /^[0-9]{10}$/,
+    required: false
+  },
+  address: {
+    type: String,
+    required: false,
+    trim: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  isActive: {
+    type: Boolean,
+    default: true
+  }
+});
 
-export default mongoose.model('Customer', customerSchema);
+// Indexes for dashboard filters
+customerSchema.index({ email: 1 }, { unique: true });
+customerSchema.index({ createdAt: -1 });
+customerSchema.index({ isActive: 1 });
+
+export default mongoose.model("Customer", customerSchema);

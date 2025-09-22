@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Aarav Mehta",
+    "email": "aarav.mehta@example.com",
+    "phone": "9876543210",
+    "address": "12 Spice Street, Fort Mill, SC",
+    "createdAt": "2025-08-01T10:15:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "Emily Johnson",
+    "email": "emily.johnson@example.com",
+    "phone": "8035551234",
+    "address": "45 Maple Drive, Charlotte, NC",
+    "createdAt": "2025-08-02T11:00:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "Rohan Gupta",
+    "email": "rohan.gupta@example.com",
+    "phone": "9876543212",
+    "address": "56 Masala Blvd, Fort Mill, SC",
+    "createdAt": "2025-08-03T09:45:00.000Z",
+    "isActive": false
+  },
+  {
+    "name": "Michael Thompson",
+    "email": "michael.thompson@example.com",
+    "phone": "8035555678",
+    "address": "89 Oak Street, Rock Hill, SC",
+    "createdAt": "2025-08-04T14:30:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "Isha Verma",
+    "email": "isha.verma@example.com",
+    "phone": "9876543213",
+    "address": "78 Tandoori Ave, Fort Mill, SC",
+    "createdAt": "2025-08-05T16:20:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "James Carter",
+    "email": "james.carter@example.com",
+    "phone": "8035559012",
+    "address": "102 Pine Lane, Columbia, SC",
+    "createdAt": "2025-08-06T08:10:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "Neha Patel",
+    "email": "neha.patel@example.com",
+    "phone": "9876543211",
+    "address": "34 Curry Lane, Fort Mill, SC",
+    "createdAt": "2025-08-07T12:00:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "Olivia Martinez",
+    "email": "olivia.martinez@example.com",
+    "phone": "8035553456",
+    "address": "210 Sunset Blvd, Charleston, SC",
+    "createdAt": "2025-08-08T15:45:00.000Z",
+    "isActive": false
+  },
+  {
+    "name": "Kabir Singh",
+    "email": "kabir.singh@example.com",
+    "phone": "9876543214",
+    "address": "90 Chaat Circle, Fort Mill, SC",
+    "createdAt": "2025-08-09T17:30:00.000Z",
+    "isActive": true
+  },
+  {
+    "name": "Sophia White",
+    "email": "sophia.white@example.com",
+    "phone": "8035557890",
+    "address": "321 Riverwalk Way, Greenville, SC",
+    "createdAt": "2025-08-10T13:20:00.000Z",
+    "isActive": true
+  }
+ 
+]
