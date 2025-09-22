@@ -18,8 +18,11 @@ const seedMenu = async () => {
     await MenuItem.deleteMany();
     console.log(' Existing menu items cleared');
 
-    const inserted = await MenuItem.insertMany(menuItems);
-    console.log(` ${inserted.length} menu items seeded`);
+    
+    await MenuItem.insertMany(menuItems);
+    console.log(' Menu items Added');
+    
+    
 
     process.exit(0);
   } catch (err) {

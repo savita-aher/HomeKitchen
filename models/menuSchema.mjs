@@ -16,11 +16,6 @@ const menuSchema = new mongoose.Schema(
       type: Boolean,
       required: true
     },
-    spiceLevel: {
-      type: String,
-      enum: ['low', 'medium', 'spicy', 'very spicy'],
-      default: 'medium'
-    },
     available: {
       type: Boolean,
       default: true
