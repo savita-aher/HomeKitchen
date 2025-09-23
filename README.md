@@ -34,4 +34,4 @@ example .json :
 - /menu/analytics/price-below-5 – Lists items priced below ₹5
 - /menu/analytics/group-by-availability – Groups items by availability status
 - /menu/analytics/group-by-same-price – Groups items that have the same price
-
+- /analytics/active - give list of all active customers 
