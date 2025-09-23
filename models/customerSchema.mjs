@@ -33,8 +33,7 @@ const customerSchema = new mongoose.Schema({
   }
 });
 
-// Indexes for dashboard filters
-customerSchema.index({ email: 1 }, { unique: true });
+// ✅ Indexes for dashboard filters
 customerSchema.index({ createdAt: -1 });
 customerSchema.index({ isActive: 1 });
 

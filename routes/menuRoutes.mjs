@@ -1,6 +1,16 @@
 import express from 'express';
 import MenuItem from '../models/menuSchema.mjs';
 
+import {
+  
+  groupByVegStatus,
+  getMostExpensiveMenuItem,
+  groupByPriceBelowFive,
+  groupByAvailability,
+  groupBySamePrice
+} from '../controllers/menuControllers.mjs';
+
+
 const router = express.Router();
 
 // GET all menu items
@@ -43,10 +53,7 @@ router.patch('/:id', async (req, res, next) => {
     if (!req.body || Object.keys(req.body).length === 0) {
       return res.status(400).json({ msg: "❌ No update data provided" });
     }
-
-    console.log("Update payload:", req.body);
-
-    const item = await MenuItem.findByIdAndUpdate(req.params.id, req.body, {
+      const item = await MenuItem.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true
     });
@@ -74,7 +81,7 @@ router.delete('/:id', async (req, res, next) => {
 });
 
 // DELETE ALL menu item
-router.get('/', async (req, res, next) => {
+router.get('/all', async (req, res, next) => {
   try {
     const items = await MenuItem.deleteMany();
     res.status(200).json('All the Menu item deleted');
@@ -82,5 +89,18 @@ router.get('/', async (req, res, next) => {
     next(err);
   }
 });
+
+// Analytics routes
+router.get('/test', (req, res) => {
+  res.send('✅ Menu router is working');
+});
+
+router.get('/analytics/group-by-veg', groupByVegStatus);
+router.get('/analytics/most-expensive', getMostExpensiveMenuItem);
+router.get('/analytics/price-below-5', groupByPriceBelowFive);
+router.get('/analytics/group-by-availability', groupByAvailability);
+router.get('/analytics/group-by-same-price', groupBySamePrice);
+
+
 
 export default router;

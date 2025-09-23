@@ -9,3 +9,29 @@ A modular backend API built with Express and Mongoose to manage home-cooked meal
 - Mongoose for MongoDB ODM
 - dotenv for environment configuration
 - CORS for cross-origin support
+
+## Menu API Endpoints
+ Basic CRUD Routes
+- GET /menu – Returns all menu items
+- GET /menu/:id – Returns a single menu item by ID
+- POST /menu – Creates a new menu item
+example .json :
+{
+  "name": "Paneer Tikka",
+  "price": 7.99,
+  "isVeg": true,
+  "available": true,
+  "timesOrdered": 0
+}
+- PATCH /menu/:id – Updates a menu item by ID
+- DELETE /menu/:id – Deletes a menu item by ID
+- GET /menu/all – Deletes all menu items (use with caution)
+
+
+##  Analytics API Endpoint
+- /menu/analytics/group-by-veg – Groups menu items by vegetarian and non-vegetarian
+- /menu/analytics/most-expensive – Returns the most expensive menu item
+- /menu/analytics/price-below-5 – Lists items priced below ₹5
+- /menu/analytics/group-by-availability – Groups items by availability status
+- /menu/analytics/group-by-same-price – Groups items that have the same price
+
