@@ -1,5 +1,8 @@
 import express from 'express';
 import Customer from '../models/customerSchema.mjs';
+import {getActiveCustomers ,
+} from '../controllers/customerControllers.mjs';
+
 
 const router = express.Router();
 
@@ -34,5 +37,10 @@ router.get('/:id', async (req, res, next) => {
     next(err);
   }
 });
+
+
+router.get('/analytics/active', getActiveCustomers);
+
+
 
 export default router;
