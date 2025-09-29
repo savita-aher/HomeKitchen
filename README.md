@@ -47,7 +47,7 @@ example .json :
 
 -npm run dev
 
-##⚙️ Make sure to configure your .env file with:
+## configure your .env file 
 
 -MONGO_URI=your_mongodb_connection_string
 
