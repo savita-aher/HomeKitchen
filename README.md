@@ -40,12 +40,17 @@ example .json :
 
 ## Installation
 -git clone https://github.com/yourusername/homekitchen.git
+
 -cd homekitchen
+
 -npm install
+
 -npm run dev
 
 ##⚙️ Make sure to configure your .env file with:
+
 -MONGO_URI=your_mongodb_connection_string
+
 -PORT=5000
 
 
